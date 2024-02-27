@@ -1,0 +1,71 @@
+@charset "utf-8";
+.editor-textarea {border: 1px dotted #999999; padding: 15px; min-height: 50px;}
+.editor-toolbar {
+  position: absolute;
+  display: none;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  z-index: 2900;
+  background: #fff;
+  border: 1px solid #f5f5f5;
+  border-top: 3px solid #333333;
+  max-width: 470px;
+  border-radius: 0.2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 1px 1px rgba(0,0,0,0.16);
+  padding: 0 0.25rem;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+.editor-toolbar.etb-active:has(.etb-full-width) {display: flex; align-items: center; flex-flow: row wrap;}
+.editor-toolbar.etb-active {display: block; box-sizing: border-box;}
+.editor-toolbar.etb-active:empty {display: block;}
+.editor-toolbar button, .editor-toolbar input:not([type="checkbox"]):not([type="radio"]), .editor-toolbar select {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #fff;
+  border: 1px solid #fff;
+  padding: 0 0.25rem;
+  height: 2.5rem !important;
+  min-width: 65px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: normal;
+  border-radius: 0.4rem;
+  color: #333;
+  box-shadow: none;
+  outline: none;
+  box-sizing: border-box;
+}
+.editor-toolbar button {cursor: pointer;}
+.editor-toolbar button.small {font-size: 0.8rem;}
+.editor-toolbar button:hover {background: #f0f0f0;}
+.editor-toolbar button.active {background: #bbfffd; border: 1px solid #fff;}
+.editor-toolbar button svg {width: 18px; height: 18px;}
+.editor-toolbar ul.items {list-style-type: none; padding: 0; margin: 0;}
+.editor-toolbar ul.items li {cursor: pointer; padding: 0.4rem; display: flex; align-items: center;}
+.editor-toolbar ul.items li:not(:first-of-type) {border-top: 1px solid #f5f5f5;}
+.editor-toolbar ul.items li:hover {background: #f0f0f0;}
+.editor-toolbar ul.items img {max-width: 80px; padding-right: 0.4rem;}
+.editor-toolbar ul.items {max-height: 300px; overflow-y: auto;}
+.editor-toolbar input:not([type="checkbox"]):not([type="radio"]), .editor-toolbar select {border: 1px solid #f0f0f0; padding: 0 0.5rem; border-radius: 0.2rem;}
+.editor-toolbar input:focus, .editor-toolbar select:focus {border: 1px solid #bbfffd !important;}
+.editor-toolbar input[type="checkbox"] {margin-right: 0.25rem;}
+.etb-full-width {flex-basis: 100%; box-sizing: border-box;}
+pre.editor-html-mode {all: initial;}
+.etb-sv {background: #e0e0e0; width: 1px; height: 36px; margin: 0 2px; display: inline-block; vertical-align: middle;}
+.etb-sv-space {background: #fff; width: 4px; height: 36px; margin: 0 2px; display: inline-block; vertical-align: middle;}
+.etb-sh {background: #e0e0e0; height: 1px; width: 100%; margin: 2px auto; display: block;}
+.etb-sh-space {background: #fff; height: 4px; width: 100%; margin: 2px auto; display: block;}
+
+[contenteditable] table {margin-bottom: 20px;}
+[contenteditable] table td {border: 1px dotted #333; padding: 5px 10px;}
+[contenteditable]:focus {outline: 0px solid transparent;}
+[contenteditable]:empty:before {
+  display: block;
+  color: #999999;
+  content: attr(data-placeholder);
+}
+[data-editor-language] {display: none;}

@@ -1,0 +1,19 @@
+{
+    "name": "tobento/js-editor",
+    "type": "library",
+    "description": "Simple JavaScript WYSIWYG HTML Editor with inlined toolbar only.",
+    "keywords": [
+        "tobento",
+        "html editor",
+        "WYSIWYG"
+    ],
+    "homepage": "https://www.tobento.ch",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Strub",
+            "email": "info@tobento.ch",
+            "homepage": "https://www.tobento.ch"
+        }
+    ]
+}
