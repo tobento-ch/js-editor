@@ -114,15 +114,9 @@ export default class Selection {
     }
     
     replaceNode(node) {
-        
-        //const sel = this.get();
-        
-        //console.log(sel);
-        //const strongElement = document.createElement("p");
         const userSelection = window.getSelection();
         const selectedTextRange = userSelection.getRangeAt(0);
         selectedTextRange.surroundContents(node);
-        //console.log(selectedTextRange);
     }
     
     /**
