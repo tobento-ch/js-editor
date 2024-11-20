@@ -46,6 +46,7 @@ const editors = (function(window, document) {
                 this.el.parentNode.insertBefore(this.inputEl, this.el.nextSibling);
                 this.el.replaceWith(editableEl);
                 this.el = editableEl;
+                this.selection.el = editableEl;
             }
             
             // set attributes:
